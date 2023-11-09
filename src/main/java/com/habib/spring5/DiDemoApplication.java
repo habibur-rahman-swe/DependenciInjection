@@ -13,8 +13,9 @@ public class DiDemoApplication {
 		ApplicationContext ctx = SpringApplication.run(DiDemoApplication.class, args);
 		
 		MyController controller = (MyController)ctx.getBean("myController");
+		System.out.println("In Main Method");
 		
-		controller.hello();
+		System.out.println(controller.sayHello());
 	}
 
 }
