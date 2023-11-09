@@ -1,18 +1,14 @@
 package com.habib.spring5.controller;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 
-import com.habib.spring5.services.GreetingServiceImpl;
-
+@SpringBootTest
 public class SetterInjectedControllerTest {
-	SetterInjectedController setterInjectedController = new SetterInjectedController();
 	
-	@BeforeEach
-	void setUp() {
-		setterInjectedController = new SetterInjectedController();
-		setterInjectedController.setGreetingService(new GreetingServiceImpl());
-	}
+	@Autowired
+	SetterInjectedController setterInjectedController;
 	
 	@Test
 	void sayHello() {
