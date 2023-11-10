@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 
 import com.habib.spring5.services.GreetingService;
 
-@Profile("ES")
+@Profile({"ES", "default"})
 @Service("i18NService")
 public class SpanishGreetingService implements GreetingService {
 	@Override
